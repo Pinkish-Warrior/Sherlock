@@ -1,0 +1,192 @@
+# .gitignore.example - An Annotated Guide
+#
+# This file serves as a detailed, educational version of a typical .gitignore file.
+# Comments explain why certain files and directories are ignored.
+# You can use this as a reference to build your own project-specific .gitignore.
+
+# ==============================================================================
+# SECTION: Compiled Source & Binaries
+#
+# Why: These files are generated from your source code by a compiler or builder.
+# They are not the "source of truth" and will be re-created automatically.
+# Committing them leads to merge conflicts and bloats the repository.
+# ==============================================================================
+*.com            # Compiled MS-DOS applications
+*.class          # Compiled Java classes
+*.dll            # Dynamically linked libraries (often on Windows)
+*.exe            # Executable files (often on Windows)
+*.o              # Object files (intermediate compiled files)
+*.so             # Shared object files (on Linux/Unix)
+*.lib            # Static libraries
+*.a              # Archive files (often on Unix)
+*.pyc            # Compiled Python files
+*.swp            # Swap files created by editors like Vim
+*.bak            # Backup files often created by editors
+*.orig           # Original files saved by tools like `patch`
+*.rej            # Rejected patch files
+*.swo            # Swap file from Vim
+
+# ==============================================================================
+# SECTION: Build & Package Output
+#
+# Why: These directories contain the final output of your build process or packaged
+# application. They should be regenerated from source for each build.
+# ==============================================================================
+build/           # Common build output directory (e.g., for Gradle, Webpack)
+dist/            # Distribution folder, common for web projects
+target/          # Common for Java (Maven) and Rust projects
+.next/           # Build output for Next.js projects
+.nuxt/           # Build output for Nuxt.js projects
+.svelte-kit/     # Build output for SvelteKit projects
+.out/            # Often used for exported static sites (e.g., by Next.js)
+
+# ==============================================================================
+# SECTION: Dependency Directories
+#
+# Why: These contain third-party packages managed by a package manager. They can
+# be very large and are easily re-installed using a manifest file (like
+# package.json, requirements.txt, or Cargo.toml).
+# ==============================================================================
+node_modules/    # Node.js dependencies
+vendor/          # Common for PHP (Composer), Go, and Ruby dependencies
+jspm_packages/   # Dependencies from the JSPM package manager
+bower_components/# Dependencies from the Bower package manager
+
+# ==============================================================================
+# SECTION: Log & Cache Files
+#
+# Why: Logs are environment-specific and generated during runtime. Caches are
+# temporary files to speed up processes. Neither should be version controlled.
+# ==============================================================================
+*.log            # Log files
+npm-debug.log*   # NPM debug logs
+yarn-debug.log*  # Yarn debug logs
+yarn-error.log*  # Yarn error logs
+.npm/            # NPM's cache directory
+.yarn/           # Yarn's cache and release directory
+.pnp/            # Yarn Plug'n'Play directory
+.pnp.js          # Yarn Plug'n'Play loader
+.eslintcache     # ESLint's cache file
+.babelcache/     # Babel's cache directory
+.parcel-cache/   # Parcel's cache directory
+.vite/           # Vite's cache directory
+.rollup.cache    # Rollup's cache file
+.nyc_output/     # NYC (Istanbul) code coverage output
+coverage/        # Common code coverage output directory
+.sass-cache/     # Sass cache directory
+.tmp/            # Temporary files directory
+
+# ==============================================================================
+# SECTION: OS-Generated Files
+#
+# Why: These files are created by the operating system for its own purposes (like
+# indexing or icon display) and have no relevance to the project itself.
+# ==============================================================================
+.DS_Store        # macOS folder metadata
+.DS_Store?       #
+._*              # macOS resource forks
+.Spotlight-V100  # macOS Spotlight indexing
+.Trashes         # macOS trash files
+Thumbs.db        # Windows thumbnail cache
+ehthumbs.db      # Windows media thumbnail cache
+[Dd]esktop.ini   # Windows folder customization file
+
+# ==============================================================================
+# SECTION: IDE & Editor Configuration
+#
+# Why: These files store your personal editor settings, which can vary from
+# developer to developer. It's better to share project-wide settings via a
+# checked-in, non-user-specific file (like .editorconfig).
+# ==============================================================================
+.idea/           # JetBrains IDEs (IntelliJ, WebStorm, etc.)
+.vscode/         # Visual Studio Code (unless you want to share launch/tasks configs)
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.sublime-project # Sublime Text project files
+*.sublime-workspace # Sublime Text workspace files
+.project         # Eclipse project files
+.classpath       # Eclipse Java classpath
+.settings/       # Eclipse project settings
+
+# ==============================================================================
+# SECTION: Environment & Sensitive Files
+#
+# Why: These files contain secrets, API keys, and local configuration that
+# should NEVER be committed to version control for security reasons.
+# ==============================================================================
+.env             # General environment variables
+.env.local       # Local environment overrides
+.env.*.local     # Environment-specific local overrides (e.g., .env.development.local)
+*.pem            # Private key files
+*.key            # Private key files
+.secrets/        # A directory for secrets
+secrets.yml      #
+*.kubeconfig     # Kubernetes configuration files
+
+# ==============================================================================
+# SECTION: Infrastructure & State
+#
+# Why: Files related to infrastructure-as-code tools that store local state.
+# Committing them can cause issues when multiple people run the same tools.
+# ==============================================================================
+.terraform/      # Terraform local plugins
+*.tfstate        # Terraform state file (use remote state instead)
+*.tfstate.backup # Terraform state backup
+.serverless/     # Serverless framework directory
+.vagrant/        # Vagrant local machine state
+
+# ==============================================================================
+# SECTION: Language & Framework Specific
+#
+# Why: Various languages and frameworks have their own specific temporary or
+# generated files that should be ignored.
+# ==============================================================================
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+env/
+venv/
+lib/
+lib64/
+
+# Rust
+*.rs.bk
+
+# Go
+*.exe
+*.test
+*.prof
+
+# Java
+*.jar
+*.war
+*.ear
+
+# ==============================================================================
+# SECTION: AI Tooling
+#
+# Why: Local caches, logs, and temporary files generated by AI assistants or
+# development tools.
+# ==============================================================================
+.claude/          # Placeholder for any local cache/files from Claude-related tools
+claude_cache/
+
+# ==============================================================================
+# SECTION: Gemini CLI Specific
+# ==============================================================================
+.gemini/          # Gemini cache, logs, and temp files
+.geminiignore     # Project-specific ignore file for Gemini
+
+# ==============================================================================
+# SECTION: Sherlock Reports
+#
+# Why: These reports contain system-specific file paths and potentially sensitive
+# environment details. Ignoring them prevents accidental exposure and mitigates
+# risks like path traversal vulnerabilities if the repository is public or shared.
+# They are transient reports generated locally.
+# ==============================================================================
+Sherlock/Report/projects_inventory.csv
+Sherlock/Report/projects_summary.csv

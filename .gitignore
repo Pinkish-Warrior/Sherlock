@@ -1,0 +1,223 @@
+# .gitignore model for robust project exclusion
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.lib
+*.a
+*.pyc
+*.swp
+*.bak
+*.orig
+*.rej
+*.swo
+
+# Packages #
+############
+# It's better to list these by name if you can
+# rather than by globbing, as it's more specific.
+# Visual Studio
+[Bb]in/
+[Oo]bj/
+*.pdb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Xcode
+.DS_Store
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.pbxlop
+!default.pbxlop
+*.xcappdata
+!default.xcappdata
+*.xcscheme
+!default.xcscheme
+*.webapp
+!default.webapp
+*.moved-aside
+xcuserdata/
+DerivedData/
+.idea/
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# Logs #
+########
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.nyc_output/
+coverage/
+
+# Node.js #
+###########
+node_modules/
+dist/
+build/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+tmp/
+*.tsbuildinfo
+.babelcache/
+.eslintcache
+.next/ # Next.js build output
+.nuxt/ # Nuxt.js build output
+.vuepress/dist # VuePress build output
+.serverless/ # Serverless directories
+.webpack/ # Serverless Webpack directories
+.netlify/ # Netlify directories
+.fusion/ # Fusion.js directories
+.fusebox/ # FuseBox directories
+.cache/
+.parcel-cache/
+.rollup.cache/
+.vite/ # Vite cache
+.idea/ # IntelliJ Idea
+.vscode/ # VS Code
+*.sublime-project
+*.sublime-workspace
+
+# Python #
+##########
+__pycache__/
+*.py[cod]
+*$up.py
+.Python
+env/
+venv/
+lib/
+lib64/
+bin/
+share/
+include/
+.idea/
+.vscode/
+
+# Java #
+########
+*.jar
+*.war
+*.ear
+*.class
+.project
+.classpath
+.settings/
+.idea/
+target/
+build/
+
+# Go #
+######
+*.exe
+*.test
+*.prof
+vendor/
+
+# Rust #
+########
+target/
+**/*.rs.bk
+
+# Maven #
+#########
+target/
+
+# Gradle #
+##########
+.gradle/
+build/
+
+# Composer #
+############
+vendor/
+
+# Ruby #
+########
+.bundle/
+vendor/bundle/
+log/*.log
+tmp/
+
+# Terraform #
+#############
+.terraform/
+*.tfplan
+*.tfstate
+*.tfstate.backup
+
+# Docker #
+##########
+*.dockerignore
+*.env
+# If you are using Podman as you mentioned previously
+# it is common to also ignore build-related directories
+# that Podman might create
+podman-build/
+containers/
+
+# Kubernetes #
+##############
+*.kubeconfig
+
+# Database #
+############
+*.sqlite
+*.db
+*.sql # Often contains sensitive data or is schema creation. Keep it under VCS if it's meant for schema.
+
+# Misc #
+########
+*.swp
+*.bak
+*.orig
+*.rej
+*~
+*.log
+.DS_Store
+.idea/
+.project
+.vscode/
+.history/
+*.tgz
+.sass-cache/
+.nyc_output/
+.tmp/
+
+# AI Tooling #
+##############
+.claude/
+claude_cache/
+
+# Gemini Specific #
+###################
+.gemini/
+.geminiignore
+
+# Sherlock Reports #
+####################
+Sherlock/Report/projects_inventory.csv
+Sherlock/Report/projects_summary.csv
