@@ -219,5 +219,4 @@ claude_cache/
 
 # Sherlock Reports #
 ####################
-Sherlock/Report/projects_inventory.csv
-Sherlock/Report/projects_summary.csv
+Report/

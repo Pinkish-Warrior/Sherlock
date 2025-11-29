@@ -188,5 +188,5 @@ claude_cache/
 # risks like path traversal vulnerabilities if the repository is public or shared.
 # They are transient reports generated locally.
 # ==============================================================================
-Sherlock/Report/projects_inventory.csv
-Sherlock/Report/projects_summary.csv
+Report/
+
