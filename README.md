@@ -94,6 +94,8 @@ Next Steps / Recommendations
   - dead_or_duplicate_alert
   - total_size_bytes
   - language or last_opened_iso
-  - Use this to identify projects to archive, delete, or reorganize
+  - Use this to identify projects to archive, delete, or reorganise
+ 
+![Human-led - AI-enhanced](https://img.shields.io/badge/🧠%20Human%20Led%20%2D%20🤖%20AI%20Enhanced-success)
 
 
